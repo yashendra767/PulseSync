@@ -134,23 +134,33 @@ class DoctorHome : Fragment() {
             }
 
             if (alerts.isNotEmpty()) {
-                val newAlert = AlertItem(
-                    title = "Alert for ${patient.patientName}",
-                    description = alerts.joinToString("\n"),
-                    severity = severityLevel
-                )
+                val alertTitle = "Alert for ${patient.patientName}"
+                val alertDescription = alerts.joinToString("\n")
 
-                generatedAlerts.add(newAlert)
+                firestore.collection("alerts")
+                    .whereEqualTo("bedId", patient.bedId)
+                    .whereEqualTo("title", alertTitle)
+                    .whereEqualTo("description", alertDescription)
+                    .get()
+                    .addOnSuccessListener { snapshot ->
+                        if (snapshot.isEmpty) {
+                            val newAlert = AlertItem(
+                                title = alertTitle,
+                                description = alertDescription,
+                                severity = severityLevel
+                            )
 
-                val alertMap = hashMapOf(
-                    "title" to newAlert.title,
-                    "description" to newAlert.description,
-                    "severity" to newAlert.severity,
-                    "bedId" to patient.bedId,
-                    "timestamp" to System.currentTimeMillis()
-                )
+                            val alertMap = hashMapOf(
+                                "title" to newAlert.title,
+                                "description" to newAlert.description,
+                                "severity" to newAlert.severity,
+                                "bedId" to patient.bedId,
+                                "timestamp" to System.currentTimeMillis()
+                            )
 
-                alertsCollection.add(alertMap)
+                            firestore.collection("alerts").add(alertMap)
+                        }
+                    }
             }
         }
     alertAdapter.notifyDataSetChanged()
