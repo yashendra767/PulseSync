@@ -98,6 +98,7 @@ PulseSync is a hospital management application designed to streamline operations
   
 ## Screenshots 
 
+![IMG-20250529-WA0002](https://github.com/user-attachments/assets/2e21f212-9c1a-4049-b5e1-cd8bd0ecc6c5)
 ![IMG-20250529-WA0009](https://github.com/user-attachments/assets/19b71b71-2309-4d8d-830a-311456e89f7a)
 ![IMG-20250529-WA0008](https://github.com/user-attachments/assets/0a5c8bc1-06ce-4d43-9af7-042716d1355b)
 ![IMG-20250529-WA0007](https://github.com/user-attachments/assets/8aaa3f68-26e2-4767-b68b-055e01ab6542)
