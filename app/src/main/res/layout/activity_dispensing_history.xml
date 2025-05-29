@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDispense"
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:background="@color/primary_red"
+        app:title="Dispense History"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/baseline_arrow_back_white_ios_new_24"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:queryHint="Search item or note..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:layout_margin="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDispenseHistory"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+</LinearLayout>

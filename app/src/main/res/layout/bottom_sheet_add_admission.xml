@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bottom_sheet_bg_bed">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPatientNameAdm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPatientNameAdm"
+            android:layout_width="match_parent"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro"
+            android:hint="Patient Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBedIdAdm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBedIdAdm"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/source_sans_pro"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Bed Id" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAdmissionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAdmissionDate"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/source_sans_pro"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="Admission Date(DD/MM/YY)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAdmissionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAdmissionStatus"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/source_sans_pro"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Admission Status(Admitted or Unadmitted)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Temperature (°F)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTemperature"
+            android:inputType="numberDecimal"
+            android:fontFamily="@font/source_sans_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Oxygen Level (%)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextOxygen"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/source_sans_pro"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Blood Pressure (e.g. 120/80)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextBP"
+            android:inputType="text"
+            android:fontFamily="@font/source_sans_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveAdmission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lufga_regular"
+        android:text="Add Admission"
+        android:backgroundTint="@color/primary_green"
+        android:textColor="@color/black" />
+
+</LinearLayout>

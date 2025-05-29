@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bottom_sheet_add_report_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Report"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lufga_regular"
+        android:paddingBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etReportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:fontFamily="@font/lufga_regular"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etReportPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro"
+        android:hint="Period (e.g., Q1 2025)"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etReportSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Summary"
+        android:fontFamily="@font/lufga_regular"
+        android:inputType="textMultiLine"/>
+
+    <Spinner
+        android:id="@+id/spinnerReportType"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:entries="@array/report_types"/>
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_yellow"
+        android:text="Select Date"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnSubmitReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/primary_yellow"
+        android:text="Submit"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

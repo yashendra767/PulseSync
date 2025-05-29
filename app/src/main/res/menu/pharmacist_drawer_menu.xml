@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_inventory" android:title="Inventory Management" android:icon="@drawable/inventory"/>
+    <item android:id="@+id/nav_dispense_history" android:title="Dispensing History" android:icon="@drawable/dispense" />
+    <item android:id="@+id/nav_settings" android:title="Settings" android:icon="@drawable/settings" />
+    <item android:id="@+id/nav_help" android:title="Help and Support" android:icon="@drawable/help"/>
+</menu>

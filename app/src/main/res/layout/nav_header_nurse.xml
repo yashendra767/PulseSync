@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/primary_green"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/nurseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nurse Name"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lufga_regular"/>
+
+    <TextView
+        android:id="@+id/nurseEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="nurse@example.com"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/nurseRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nurse"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:fontFamily="@font/lufga_regular"/>
+</LinearLayout>

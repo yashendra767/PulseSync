@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnScanQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="25dp"
+        app:cardElevation="5dp"
+         app:cardBackgroundColor="@color/primary_blue">
+
+        <TextView
+            android:fontFamily="@font/lufga_regular"
+            android:textSize="26sp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan QR Code" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvScanResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lufga_regular"
+        android:text="Scan results will appear here"
+        android:textSize="18sp"
+        android:paddingTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvItemDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:paddingTop="12dp"/>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "201009644700",
+    "project_id": "pulsesync-82697",
+    "storage_bucket": "pulsesync-82697.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201009644700:android:ca08d40fdb4c2990e2d959",
+        "android_client_info": {
+          "package_name": "com.example.pulsesync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-E3wWD2xaBFE2H-lO78c9Nf8unZun6Fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

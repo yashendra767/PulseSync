@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_manage.UsersManagement"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_blue"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"
+        app:title="Users Management"
+        android:titleTextColor="@color/black"
+        app:menu="@menu/users_management_menu"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="@color/primary_blue"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/primary_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchUserEditText"
+            android:fontFamily="@font/lufga_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search users..."
+            android:drawableStart="@drawable/baseline_search_24"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+        android:id="@+id/userTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+            android:background="@color/primary_blue"
+        app:tabIndicatorColor="#FFEEB3"
+        app:tabSelectedTextColor="#FFEEB3"
+        app:tabTextColor="@color/white"
+            app:tabGravity="fill"
+        app:tabMode="scrollable">
+
+        <com.google.android.material.tabs.TabItem
+            android:text="All" android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Admin" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Doctor" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Nurse" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Pharmacist" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="16dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/primary_blue"
+        android:tint="@android:color/white"/>
+</LinearLayout>

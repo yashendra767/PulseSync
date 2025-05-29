@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_nurse_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lufga_regular"
+        android:text="Welcome, Nurse"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/primary_green"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:id="@+id/tv_active_patients"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:fontFamily="@font/lufga_regular"
+            android:layout_height="wrap_content"
+            android:text="Active Patients: 0"
+            android:textSize="16sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_alerts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_no_alerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:fontFamily="@font/lufga_regular"
+        android:text="No alerts for now"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:padding="10dp"/>
+</LinearLayout>

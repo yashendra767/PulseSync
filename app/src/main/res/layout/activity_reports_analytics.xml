@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".reports.ReportsAnalytics">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_yellow"
+        android:elevation="4dp"
+        android:padding="7dp"
+        app:title="Reports and Analytics"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="80dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tvTotalBeds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="120"
+                                android:fontFamily="@font/lufga_regular"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_yellow"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Beds"
+                                android:textSize="14sp"
+                                android:textColor="#2D3436"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tvOccupiedBeds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="35"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/lufga_regular"
+                                android:textColor="@color/primary_yellow"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Occupied Beds"
+                                android:textSize="14sp"
+                                android:textColor="#2D3436"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tvActiveAdmissions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/lufga_regular"
+                                android:textColor="@color/primary_yellow"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active Admissions"
+                                android:textSize="14sp"
+                                android:textColor="#2D3436"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate Reports"
+                android:textSize="20sp"
+                android:fontFamily="@font/lufga_regular"
+                android:textColor="#C38839"
+                android:textStyle="bold"
+                android:paddingBottom="6dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerReportType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/report_types"
+                android:background="@drawable/spinner_background"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/primary_yellow"
+                    android:text="Start Date"/>
+
+                <Button
+                    android:id="@+id/btnEndDate"
+                    android:layout_width="0dp"
+                    android:backgroundTint="@color/primary_yellow"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:layout_weight="1"
+                    android:text="End Date"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGenerateReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lufga_regular"
+                android:backgroundTint="#FBF6E9"
+                android:textColor="#C38839"
+                android:textSize="18dp"
+                android:text="Generate Report"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReportData"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No reports available"
+                android:textColor="#2D3436"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analytics"
+                android:textSize="20sp"
+                android:fontFamily="@font/lufga_regular"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingTop="16dp"/>
+
+            <FrameLayout
+                android:id="@+id/analyticsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:elevation="4dp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/primary_yellow"/>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/primary_blue"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTaskTitle"
+            android:hint="Task Title"
+            android:fontFamily="@font/lufga_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeColor="@color/primary_blue"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTaskTime"
+            android:hint="Time (e.g., 10:30 AM)"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/source_sans_pro"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinnerDoctor"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_card"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+    android:id="@+id/spinnerNurse"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_card"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp" />
+
+</LinearLayout>

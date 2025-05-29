@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvBedId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="@font/lufga_regular"
+            android:text="Bed ID: 101"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvBedType"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/lufga_regular"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="Type: ICU"/>
+
+        <TextView
+            android:id="@+id/tvBedStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lufga_regular"
+            android:textSize="16sp"
+            android:text="Status: Occupied"/>
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lufga_regular"
+            android:textSize="16sp"
+            android:text="Patient: John Doe"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

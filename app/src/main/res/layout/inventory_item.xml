@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/inventoryItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lufga_regular"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/inventoryItemQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 0"
+                android:fontFamily="@font/lufga_regular"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/inventoryItemCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: Medications"
+                android:textSize="14sp"
+                android:fontFamily="@font/lufga_regular"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/inventoryItemExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expiry: 2025-12-31"
+                android:fontFamily="@font/source_sans_pro"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/inventoryItemOptions"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/more"
+            android:contentDescription="Options"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

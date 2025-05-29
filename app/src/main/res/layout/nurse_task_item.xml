@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nurseTaskCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Inventory"
+            android:fontFamily="@font/lufga_regular"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTaskTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today, 4:30 PM"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBoxComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark as done" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

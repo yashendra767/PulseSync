@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/drawer_admissions"
+        android:icon="@drawable/beds"
+        android:title="Admissions" />
+    <item android:id="@+id/drawer_reports"
+        android:icon="@drawable/report"
+        android:title="Reports" />
+    <item android:id="@+id/drawer_profile"
+        android:icon="@drawable/profile_info"
+        android:title="Profile" />
+    <item android:id="@+id/drawer_settings"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+    <item android:id="@+id/drawer_help"
+        android:icon="@drawable/help"
+        android:title="Help and Support" />
+</menu>

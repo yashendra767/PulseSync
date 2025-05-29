@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_users"
+        android:icon="@drawable/users"
+        android:title="Users Management"/>
+    <item
+        android:id="@+id/nav_inventory"
+        android:icon="@drawable/inventory"
+        android:title="Inventory Management"/>
+    <item
+        android:id="@+id/nav_beds"
+        android:icon="@drawable/beds"
+        android:title="Beds and Admissions"/>
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/report"
+        android:title="Reports and Analytics"/>
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings"
+        android:title="Settings"/>
+    <item
+        android:id="@+id/nav_helpAndSupport"
+        android:icon="@drawable/help"
+        android:title="Help And Support"/>
+</menu>
