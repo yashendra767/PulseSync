@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white_dove"
     tools:context=".beds.BedsAdmissions">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -20,6 +21,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/bedsTabs"
+            android:background="@color/white_dove"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             app:tabIndicatorColor="@color/primary_green"

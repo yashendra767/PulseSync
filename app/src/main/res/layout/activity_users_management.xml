@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".user_manage.UsersManagement"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white_dove">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarUser"

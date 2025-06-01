@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawerLayoutDoctor"
     android:layout_width="match_parent"
+    android:background="@color/white_dove"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -28,13 +29,14 @@
             android:id="@+id/bottomNavigationViewDoctor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?android:attr/windowBackground"
+            android:background="@color/white_dove"
             app:menu="@menu/bottom_nav_bar"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationViewDoctor"
         android:layout_width="wrap_content"
+        android:background="@color/white_dove"
         android:layout_height="match_parent"
         app:headerLayout="@layout/doctor_menu_header"
         android:layout_gravity="start"

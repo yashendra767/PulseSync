@@ -42,6 +42,7 @@
     <Spinner
         android:id="@+id/spinnerDoctor"
         android:layout_width="match_parent"
+        android:padding="7dp"
         android:background="@drawable/bg_card"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp" />
@@ -50,6 +51,7 @@
     android:id="@+id/spinnerNurse"
     android:layout_width="match_parent"
     android:background="@drawable/bg_card"
+        android:padding="7dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp" />
 

@@ -105,10 +105,6 @@ class DoctorHome : Fragment() {
 
     private fun generateAlertsFromVitals(patients: List<AdmissionItem>) {
         if (!isAdded) return
-
-        val generatedAlerts = mutableListOf<AlertItem>()
-        val alertsCollection = firestore.collection("alerts")
-
         for (patient in patients) {
             val alerts = mutableListOf<String>()
             var severityLevel = "Low"

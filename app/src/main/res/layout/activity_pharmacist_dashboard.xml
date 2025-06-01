@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/pharmacist_drawer_layout"
     android:layout_width="match_parent"
+    android:background="@color/white_dove"
     android:layout_height="match_parent"
     tools:context=".pharmacist.PharmacistDashboard">
 
@@ -32,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/white"
+            android:background="@color/white_dove"
             app:menu="@menu/bottom_nav_bar_pharma" />
 
     </LinearLayout>
@@ -44,6 +45,6 @@
         android:layout_gravity="start"
         app:menu="@menu/pharmacist_drawer_menu"
         app:headerLayout="@layout/nav_header_pharmacist"
-        android:background="@android:color/white" />
+        android:background="@color/white_dove" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

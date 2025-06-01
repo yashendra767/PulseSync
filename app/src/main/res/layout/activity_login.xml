@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/white_dove"
     android:layout_height="match_parent"
     tools:context=".login">
 
@@ -46,6 +47,8 @@
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeWidth="3dp"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +73,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         app:boxCornerRadiusBottomEnd="20dp"
+        app:boxStrokeColor="@color/primary_blue"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
@@ -90,6 +94,7 @@
             android:fontFamily="@font/source_sans_pro"
             android:hint=" Password"
             android:textSize="20sp"
+            android:inputType="textPassword"
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="353dp">
         </com.google.android.material.textfield.TextInputEditText>
@@ -111,11 +116,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="7dp"
+            android:layout_margin="9dp"
             android:fontFamily="@font/lufga_regular"
             android:text="LogIn"
             android:textColor="@color/black"
-            android:textSize="35dp"
+            android:textSize="33dp"
             android:textStyle="bold">
 
         </TextView>

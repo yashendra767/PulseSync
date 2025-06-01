@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    android:background="@color/white_dove">
 
     <ImageView
         android:id="@+id/imageView"
@@ -47,8 +47,10 @@
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeWidth="3dp"
+        app:boxStrokeColor="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:endIconMode="clear_text"
         app:layout_constraintStart_toStartOf="parent"
         app:errorContentDescription="Please enter valid Email"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -77,6 +79,7 @@
         app:boxStrokeWidth="3dp"
         app:endIconMode="password_toggle"
         app:endIconTint="#9CCBFD"
+        app:boxStrokeColor="@color/primary_blue"
         app:errorContentDescription="Pass should contain a special character."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,6 +93,7 @@
             android:drawableStart="@drawable/baseline_lock_outline_24"
             android:fontFamily="@font/source_sans_pro"
             android:hint=" Password"
+            android:inputType="textPassword"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="353dp">
@@ -109,6 +113,8 @@
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeWidth="3dp"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
@@ -155,11 +161,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="7dp"
+            android:layout_margin="9dp"
             android:fontFamily="@font/lufga_regular"
             android:text="SignUp"
             android:textColor="@color/black"
-            android:textSize="35dp"
+            android:textSize="33dp"
             android:textStyle="bold">
 
         </TextView>

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_dove"
     tools:context=".AdminDashboard">
 
     <LinearLayout
@@ -35,6 +36,7 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/adminBottomNav"
             app:elevation="5dp"
+            android:background="@color/white_dove"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -45,6 +47,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/adminNavView"
         android:layout_width="wrap_content"
+        android:background="@color/white_dove"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/admin_nav_header"

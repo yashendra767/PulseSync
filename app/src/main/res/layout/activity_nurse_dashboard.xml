@@ -4,6 +4,7 @@
     android:id="@+id/nurse_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_dove"
     tools:context=".nurse.NurseDashboard">
 
     <LinearLayout
@@ -29,13 +30,14 @@
             android:id="@+id/nurse_bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?android:attr/windowBackground"
+            android:background="@color/white_dove"
             app:menu="@menu/bottom_nav_bar" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nurse_nav_view"
         android:layout_width="wrap_content"
+        android:background="@color/white_dove"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/nurse_drawer_menu"
