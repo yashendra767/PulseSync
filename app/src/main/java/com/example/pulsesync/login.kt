@@ -1,12 +1,17 @@
 package com.example.pulsesync
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
 import android.text.TextUtils
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
+import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
+import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
 import com.example.pulsesync.doctor.DoctorDashboard
 import com.example.pulsesync.nurse.NurseDashboard
 import com.example.pulsesync.pharmacist.PharmacistDashboard
@@ -26,16 +31,17 @@ class login : AppCompatActivity() {
     private lateinit var tVSignUp: TextView
     private lateinit var tVSignUp2: TextView
     private lateinit var forgotPass: TextView
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
+        sharedPreferences = getSharedPreferences("PulseSyncPrefs", Context.MODE_PRIVATE)
+        setContentView(R.layout.activity_login)
 
         redirectIfLoggedIn()
-
-        setContentView(R.layout.activity_login)
 
         loginEmail = findViewById(R.id.loginEmail)
         loginPass = findViewById(R.id.loginPass)
@@ -43,6 +49,7 @@ class login : AppCompatActivity() {
         tVSignUp = findViewById(R.id.tVSignUp)
         tVSignUp2 = findViewById(R.id.tVSignUp2)
         forgotPass = findViewById(R.id.tVForgotPass)
+
 
         tVSignUp.setOnClickListener {
             startActivity(Intent(this, SignUp::class.java))
@@ -98,7 +105,7 @@ class login : AppCompatActivity() {
             .addOnSuccessListener { document ->
                 if (document.exists()) {
                     val role = document.getString("role")
-                        when (role) {
+                    when (role) {
                             "Admin" -> startActivity(Intent(this, AdminDashboard::class.java))
                             "Doctor" -> startActivity(Intent(this, DoctorDashboard::class.java))
                             "Nurse" -> startActivity(Intent(this, NurseDashboard::class.java))
@@ -116,24 +123,43 @@ class login : AppCompatActivity() {
 
     private fun redirectIfLoggedIn() {
         val currentUser = auth.currentUser
-        if (currentUser != null) {
-            db.collection("users").document(currentUser.uid)
-                .get()
-                .addOnSuccessListener { document ->
-                    if (document.exists()) {
-                        val role = document.getString("role")
-                        when (role) {
-                            "Admin" -> startActivity(Intent(this, AdminDashboard::class.java))
-                            "Doctor" -> startActivity(Intent(this, DoctorDashboard::class.java))
-                            "Nurse" -> startActivity(Intent(this, NurseDashboard::class.java))
-                            "Pharmacist" -> startActivity(Intent(this, PharmacistDashboard::class.java))
-                        }
-                        finish()
-                    }
-                }
-                .addOnFailureListener {
-                    Toast.makeText(this, "Failed to check user session", Toast.LENGTH_SHORT).show()
-                }
+        val biometricEnabled = sharedPreferences.getBoolean("biometric_enabled", false)
+
+        if (currentUser != null && biometricEnabled) {
+            showBiometricPrompt()
         }
     }
+
+    private fun showBiometricPrompt() {
+        val executor = ContextCompat.getMainExecutor(this)
+
+        val biometricPrompt = BiometricPrompt(this, executor, object : BiometricPrompt.AuthenticationCallback() {
+            override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                super.onAuthenticationError(errorCode, errString)
+
+                Toast.makeText(applicationContext, "Authentication error: $errString", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                super.onAuthenticationSucceeded(result)
+                Toast.makeText(applicationContext, "Authentication succeeded", Toast.LENGTH_SHORT).show()
+                auth.currentUser?.uid?.let { fetchUserRole(it) }
+            }
+
+            override fun onAuthenticationFailed() {
+                super.onAuthenticationFailed()
+                Toast.makeText(applicationContext, "Biometric not recognized. Try again.", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        val promptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Biometric Authentication")
+            .setSubtitle("Use your fingerprint or screen lock to continue")
+            .setAllowedAuthenticators(BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
+            .build()
+
+        biometricPrompt.authenticate(promptInfo)
+    }
+
+
 }

@@ -48,6 +48,15 @@ class Settings : AppCompatActivity() {
         spinnerTheme = findViewById(R.id.spinnerTheme)
         spinnerLanguage = findViewById(R.id.spinnerLanguage)
         val toolbarSettings = findViewById<Toolbar>(R.id.toolbarSettings)
+        val switchBiometric = findViewById<MaterialSwitch>(R.id.switchBiometric)
+        val biometricEnabled = sharedPreferences.getBoolean("biometric_enabled", false)
+        switchBiometric.isChecked = biometricEnabled
+
+        switchBiometric.setOnCheckedChangeListener { _, isChecked ->
+            sharedPreferences.edit { putBoolean("biometric_enabled", isChecked) }
+            Toast.makeText(this, "Biometric ${if (isChecked) "enabled" else "disabled"}", Toast.LENGTH_SHORT).show()
+        }
+
 
         toolbarSettings.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
 

@@ -238,6 +238,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBiometric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/fingerprint"
+                    app:tint="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="7dp"
+                    android:fontFamily="@font/lufga_regular"
+                    android:text="Enable Biometrics"
+                    android:textSize="16sp"/>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchBiometric"
+                    app:trackTint="@color/primary_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerSettings"
                 android:layout_width="match_parent"

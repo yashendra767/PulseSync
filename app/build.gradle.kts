@@ -65,6 +65,7 @@ dependencies {
     implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.biometric:biometric:1.2.0-alpha04")
 
 
 }
