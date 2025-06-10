@@ -84,10 +84,11 @@ class Profile : Fragment() {
     }
 
     private fun openEditProfileBottomSheet() {
-        val bottomSheetView = layoutInflater.inflate(R.layout.bottom_sheet_edit_profile, null)
+        val bottomSheetView = LayoutInflater.from(requireContext())
+            .inflate(R.layout.bottom_sheet_edit_profile, null)
         val bottomSheetDialog = BottomSheetDialog(requireContext())
         bottomSheetDialog.setContentView(bottomSheetView)
-
+        bottomSheetDialog.show()
         val etName = bottomSheetView.findViewById<EditText>(R.id.etEditName)
         val etEmail = bottomSheetView.findViewById<EditText>(R.id.etEditEmail)
         val etRole = bottomSheetView.findViewById<EditText>(R.id.etEditRole)

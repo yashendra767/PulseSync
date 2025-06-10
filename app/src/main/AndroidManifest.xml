@@ -16,52 +16,67 @@
         tools:targetApi="31">
         <activity
             android:name=".pharmacist.DispensingHistory"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".pharmacist.PharmacistDashboard"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".nurse.NurseDashboard"
-            android:exported="false"
-            android:theme="@style/Theme.PulseSync" />
+            android:screenOrientation="portrait"
+            android:exported="false" />
         <activity
             android:name=".doctor.DoctorHome"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".doctor.DoctorDashboard"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Settings"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".reports.ReportsAnalytics"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".beds.BedsAdmissions"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".inventory.InventoryManagement"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".user_manage.UsersManagement"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".AdminDashboard"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ForgotPass"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Home"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SignUp"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".login"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

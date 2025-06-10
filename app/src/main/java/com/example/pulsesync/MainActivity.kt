@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.view.View
 import android.os.Handler
+import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import androidx.core.os.postDelayed
 import androidx.core.view.ViewCompat
 import com.example.pulsesync.login
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val backgroundGif: ImageView = findViewById(R.id.bgGifSplash)
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.splash_logo)
+            .into(backgroundGif)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val moveButton = findViewById<CardView>(R.id.moveButton)
 
