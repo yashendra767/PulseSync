@@ -19,7 +19,8 @@ PulseSync is a hospital management application designed to streamline operations
 
 ## Features
 
-- Role-based dashboard with tailored navigation drawers and bottom navigation tabs  
+- Role-based dashboard with tailored navigation drawers and bottom navigation tabs
+- Biometric Authentication through androidx.BiometricPrompt API  
 - Patient admissions and bed management with real-time status updates
 - Admissions Bar charts and Vitals Line Charts for easy analytics  
 - Inventory management with alerts for low stock and expiry  
