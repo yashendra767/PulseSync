@@ -4,21 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="8dp">
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/primary_red_light"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="9dp">
+        android:background="@color/white_dove"
+        android:gravity="center_vertical"
+        android:padding="12dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/inventoryItemName"
@@ -26,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:text="Item Name"
                 android:textColor="@color/black"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="20sp"
+                android:fontFamily="@font/inter"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -35,18 +39,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quantity: 0"
-                android:fontFamily="@font/lufga_regular"
+                android:fontFamily="@font/inter"
                 android:textSize="14sp"
                 android:textColor="@android:color/black"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="4dp" />
 
             <TextView
                 android:id="@+id/inventoryItemCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Category: Medications"
+                android:fontFamily="@font/inter"
                 android:textSize="14sp"
-                android:fontFamily="@font/lufga_regular"
                 android:layout_marginTop="4dp" />
 
             <TextView
@@ -54,16 +58,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Expiry: 2025-12-31"
-                android:fontFamily="@font/source_sans_pro"
+                android:fontFamily="@font/inter"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
+
         <ImageView
             android:id="@+id/inventoryItemOptions"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
             android:src="@drawable/more"
-            android:contentDescription="Options"/>
+            android:contentDescription="Options" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

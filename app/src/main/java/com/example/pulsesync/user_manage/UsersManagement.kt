@@ -18,6 +18,7 @@ import com.example.pulsesync.R
 import com.example.pulsesync.user_manage.User
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.textfield.TextInputEditText
@@ -98,7 +99,7 @@ class UsersManagement : AppCompatActivity() {
         val etUserName = bottomSheetView.findViewById<TextInputEditText>(R.id.etUserName)
         val etUserEmail = bottomSheetView.findViewById<TextInputEditText>(R.id.etUserEmail)
         val etUserRole = bottomSheetView.findViewById<TextInputEditText>(R.id.etUserRole)
-        val btnAddUser = bottomSheetView.findViewById<View>(R.id.btnAddUser)
+        val btnAddUser = bottomSheetView.findViewById<MaterialButton>(R.id.btnAddUser)
 
         btnAddUser.setOnClickListener {
             val name = etUserName.text.toString().trim()

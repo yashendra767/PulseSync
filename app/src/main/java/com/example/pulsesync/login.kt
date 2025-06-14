@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import com.example.pulsesync.doctor.DoctorDashboard
 import com.example.pulsesync.nurse.NurseDashboard
 import com.example.pulsesync.pharmacist.PharmacistDashboard
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -27,7 +28,7 @@ class login : AppCompatActivity() {
 
     private lateinit var loginEmail: TextInputEditText
     private lateinit var loginPass: TextInputEditText
-    private lateinit var loginButton: MaterialCardView
+    private lateinit var loginButton: MaterialButton
     private lateinit var tVSignUp: TextView
     private lateinit var tVSignUp2: TextView
     private lateinit var forgotPass: TextView

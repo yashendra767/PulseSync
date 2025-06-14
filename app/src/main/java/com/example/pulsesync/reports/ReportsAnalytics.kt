@@ -31,6 +31,7 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 
 
 class ReportsAnalytics : AppCompatActivity() {
@@ -195,8 +196,8 @@ class ReportsAnalytics : AppCompatActivity() {
         val etPeriod: EditText = bottomSheetView.findViewById(R.id.etReportPeriod)
         val etSummary: EditText = bottomSheetView.findViewById(R.id.etReportSummary)
         val spinnerReportType: Spinner = bottomSheetView.findViewById(R.id.spinnerReportType)
-        val btnSelectDate: Button = bottomSheetView.findViewById(R.id.btnSelectDate)
-        val btnSubmitReport: Button = bottomSheetView.findViewById(R.id.btnSubmitReport)
+        val btnSelectDate: MaterialButton = bottomSheetView.findViewById(R.id.btnSelectDate)
+        val btnSubmitReport: MaterialButton = bottomSheetView.findViewById(R.id.btnSubmitReport)
 
         var selectedDate: Timestamp? = null
 

@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primary_blue"
+                app:titleTextAppearance="@style/ToolbarTitleText"
                 app:title="Admin Dashboard"
                 app:titleTextColor="@color/black"/>
         </com.google.android.material.appbar.AppBarLayout>

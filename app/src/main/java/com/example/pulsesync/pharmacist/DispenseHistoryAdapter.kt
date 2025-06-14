@@ -9,7 +9,7 @@ import com.example.pulsesync.R
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DispenseHistoryAdapter(private val historyList: List<DispenseHistoryItem>) :
+class DispenseHistoryAdapter(private val items: MutableList<DispenseHistoryItem>) :
     RecyclerView.Adapter<DispenseHistoryAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,17 +26,27 @@ class DispenseHistoryAdapter(private val historyList: List<DispenseHistoryItem>)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = historyList[position]
+        val item = items[position]
         holder.itemName.text = item.itemName
         holder.quantity.text = "Dispensed: ${item.quantityDispensed}"
-        holder.note.text = if (item.note.isNotEmpty()) "Note: ${item.note}" else "Note: -"
+        holder.note.text = if (item.note.isNotBlank()) "Note: ${item.note}" else "Note: –"
         holder.timestamp.text = formatTimestamp(item.timestamp)
     }
 
-    override fun getItemCount(): Int = historyList.size
+    override fun getItemCount(): Int = items.size
+
+    fun updateList(newList: List<DispenseHistoryItem>) {
+        items.clear()
+        items.addAll(newList)
+        notifyDataSetChanged()
+    }
 
     private fun formatTimestamp(time: Long): String {
-        val sdf = SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault())
-        return sdf.format(Date(time))
+        return try {
+            if (time <= 0L) "Invalid Time"
+            else SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault()).format(Date(time))
+        } catch (e: Exception) {
+            "Invalid Time"
+        }
     }
 }

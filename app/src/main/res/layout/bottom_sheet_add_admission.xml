@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:inputType="textPersonName"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:hint="Patient Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -37,7 +37,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etBedIdAdm"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:inputType="number"
             android:layout_height="wrap_content"
             android:hint="Bed Id" />
@@ -53,7 +53,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etAdmissionDate"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:hint="Admission Date(DD/MM/YY)" />
@@ -69,7 +69,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etAdmissionStatus"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:inputType="text"
             android:layout_height="wrap_content"
             android:hint="Admission Status(Admitted or Unadmitted)" />
@@ -83,7 +83,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTemperature"
             android:inputType="numberDecimal"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -97,7 +97,7 @@
             android:id="@+id/editTextOxygen"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +108,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextBP"
             android:inputType="text"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -118,8 +118,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/lufga_regular"
+        android:fontFamily="@font/inter"
         android:text="Add Admission"
+        app:cornerRadius="12dp"
         android:backgroundTint="@color/primary_green"
         android:textColor="@color/black" />
 

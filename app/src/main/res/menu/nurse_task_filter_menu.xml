@@ -1,11 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/filter_all"
+        android:iconTint="@color/black"
         android:title="All" />
     <item
         android:id="@+id/filter_pending"
+        android:iconTint="@color/black"
         android:title="Pending" />
     <item
         android:id="@+id/filter_completed"
+        android:iconTint="@color/black"
         android:title="Completed" />
 </menu>

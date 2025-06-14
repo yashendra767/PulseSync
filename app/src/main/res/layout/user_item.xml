@@ -1,23 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="8dp">
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="@color/primary_blue_light"
+    app:strokeWidth="1dp"
+    android:backgroundTint="@color/white_dove">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="9dp">
+        android:padding="12dp"
+        android:gravity="center_vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvUserName"
@@ -26,39 +29,34 @@
                 android:text="User Name"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="20sp"/>
+                android:textSize="18sp"
+                android:fontFamily="@font/inter" />
 
             <TextView
                 android:id="@+id/tvUserEmail"
                 android:layout_width="wrap_content"
-                android:fontFamily="@font/source_sans_pro"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="email@example.com"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"
+                android:fontFamily="@font/inter" />
 
             <TextView
                 android:id="@+id/tvUserRole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Role"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="16sp"
-                android:textColor="#808080"/>
-
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/btnMore"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center"
-            android:src="@drawable/more">
-
-        </ImageView>
-
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@drawable/more"
+            android:contentDescription="More Options" />
     </LinearLayout>
-
-
 </com.google.android.material.card.MaterialCardView>

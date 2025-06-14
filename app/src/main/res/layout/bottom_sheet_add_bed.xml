@@ -22,7 +22,7 @@
             android:id="@+id/etBedId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lufga_regular"
+            android:fontFamily="@font/inter"
             android:hint="Bed ID" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -31,12 +31,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etBedType"
             android:layout_width="match_parent"
-            android:fontFamily="@font/lufga_regular"
+            android:fontFamily="@font/inter"
             android:layout_height="wrap_content"
             android:hint="Bed Type" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,12 +50,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etBedStatus"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:layout_height="wrap_content"
             android:hint="Bed Status" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,12 +68,16 @@
         android:id="@+id/tilPatientName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPatientName"
             android:layout_width="match_parent"
-            android:fontFamily="@font/lufga_regular"
+            android:fontFamily="@font/inter"
             android:layout_height="wrap_content"
             android:hint="Patient Name" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -75,8 +87,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/lufga_regular"
+        android:fontFamily="@font/inter"
         android:text="Add Bed"
+        app:cornerRadius="12dp"
         android:backgroundTint="@color/primary_green"
         android:textColor="@color/black" />
 

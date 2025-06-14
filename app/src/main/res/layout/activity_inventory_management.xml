@@ -12,21 +12,21 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/inventoryToolbar"
         android:layout_width="match_parent"
-        app:navigationIcon="@drawable/baseline_arrow_back_white_ios_new_24"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/primary_red"
         app:title="Inventory Management"
-        app:titleTextColor="@color/white"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:titleTextAppearance="@style/ToolbarTitleText"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchInventoryLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="10dp"
-        app:boxStrokeWidth="1dp"
+        android:layout_marginTop="12dp"
+        app:boxStrokeWidth="2dp"
         app:boxStrokeColor="@color/primary_red"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
@@ -37,16 +37,16 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/searchInventoryEditText"
-            android:fontFamily="@font/lufga_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search users..."
+            android:hint="Search inventory..."
+            android:fontFamily="@font/inter"
             android:drawableStart="@drawable/baseline_search_24"
+            android:drawablePadding="8dp"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:paddingStart="8dp"/>
+            android:paddingHorizontal="8dp"/>
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/categoryTabs"
@@ -60,40 +60,30 @@
         app:tabGravity="fill"
         app:tabMode="scrollable">
 
-        <com.google.android.material.tabs.TabItem
-            android:text="All" android:layout_height="wrap_content" android:layout_width="wrap_content" />
-
-        <com.google.android.material.tabs.TabItem
-            android:text="Medicine" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:text="Consumable" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:text="Equipment" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:text="Others" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
-
+        <com.google.android.material.tabs.TabItem android:text="All" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:text="Medicine"  android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:text="Consumable" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:text="Equipment" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:text="Others" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/inventoryRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_weight="1"
         android:layout_marginBottom="16dp"
-        android:padding="16dp" />
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addInventoryFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         android:backgroundTint="@color/primary_red"
         android:contentDescription="Add Inventory"
         android:src="@drawable/baseline_add_24" />
-
 </LinearLayout>

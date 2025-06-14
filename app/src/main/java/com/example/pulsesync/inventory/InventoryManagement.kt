@@ -26,6 +26,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import androidx.core.content.edit
+import com.google.android.material.button.MaterialButton
 
 class InventoryManagement : AppCompatActivity() {
     private val lowStockThreshold = 5
@@ -121,7 +122,7 @@ class InventoryManagement : AppCompatActivity() {
         val etQuantity = bottomSheetView.findViewById<TextInputEditText>(R.id.etItemQuantity)
         val etCategory = bottomSheetView.findViewById<TextInputEditText>(R.id.etItemCategory)
         val etExpiryDate = bottomSheetView.findViewById<TextInputEditText>(R.id.etItemExpiry)
-        val btnAdd = bottomSheetView.findViewById<View>(R.id.btnAddItem)
+        val btnAdd = bottomSheetView.findViewById<MaterialButton>(R.id.btnAddItem)
 
         btnAdd.setOnClickListener {
             val name = etItemName.text.toString().trim()

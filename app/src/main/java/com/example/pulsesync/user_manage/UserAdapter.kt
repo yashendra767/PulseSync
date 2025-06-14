@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pulsesync.R
 import com.example.pulsesync.user_manage.User
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -28,27 +30,27 @@ class UserAdapter(private val context : Context, private val userList: MutableLi
             tvUserEmail.text = user.email
             tvUserRole.text = user.role
             btnMore.setOnClickListener {
-                showPopupMenu(user)
+                showManageUserDialog(user)
             }
         }
 
-        private fun showPopupMenu(user: User) {
-            val popupMenu = PopupMenu(context, btnMore)
-            popupMenu.inflate(R.menu.user_item_menu)
-            popupMenu.setOnMenuItemClickListener { menuItem ->
-                when (menuItem.itemId) {
-                    R.id.action_edit -> {
-                        showEditBottomSheet(user)
-                        true
-                    }
-                    R.id.action_delete -> {
-                        showDeleteConfirmationDialog(user)
-                        true
-                    }
-                    else -> false
-                }
+        private fun showManageUserDialog(user: User) {
+            val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_manage_user, null)
+            val dialog = AlertDialog.Builder(context)
+                .setView(dialogView)
+                .create()
+
+            dialogView.findViewById<LinearLayout>(R.id.optionEdit).setOnClickListener {
+                dialog.dismiss()
+                showEditBottomSheet(user)
             }
-            popupMenu.show()
+
+            dialogView.findViewById<LinearLayout>(R.id.optionDelete).setOnClickListener {
+                dialog.dismiss()
+                showDeleteConfirmationDialog(user)
+            }
+
+            dialog.show()
         }
     }
     private fun showEditBottomSheet(user: User) {
@@ -64,7 +66,7 @@ class UserAdapter(private val context : Context, private val userList: MutableLi
         etUserEmail.setText(user.email)
         etUserRole.setText(user.role)
 
-        bottomSheetView.findViewById<View>(R.id.btnEditUser).setOnClickListener {
+        bottomSheetView.findViewById<MaterialButton>(R.id.btnEditUser).setOnClickListener {
             val updatedUser = user.copy(
                 name = etUserName.text.toString(),
                 email = etUserEmail.text.toString(),

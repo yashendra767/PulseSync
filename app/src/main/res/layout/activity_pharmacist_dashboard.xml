@@ -19,14 +19,13 @@
             android:layout_height="wrap_content"
             android:background="@color/primary_red"
             app:title="Pharmacist Dashboard"
-            app:titleTextColor="@android:color/white" />
+            app:titleTextAppearance="@style/ToolbarTitleText" />
 
         <FrameLayout
             android:id="@+id/pharmacist_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp" />
+            android:layout_weight="1" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/pharmacist_bottom_nav"

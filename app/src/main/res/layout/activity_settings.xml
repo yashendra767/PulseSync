@@ -13,6 +13,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primary_blue"
         android:elevation="4dp"
+        app:titleTextAppearance="@style/ToolbarTitleText"
         app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"
         app:title="Settings"
         android:titleTextColor="@color/black"/>
@@ -34,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="Account Settings"
                 android:textSize="18sp"
-                android:fontFamily="@font/lufga_regular"
+                android:fontFamily="@font/inter"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingBottom="8dp"/>
@@ -67,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="Profile Info"
                     android:textSize="16sp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:textColor="@color/black"
                     android:layout_marginStart="16dp"/>
             </LinearLayout>
@@ -95,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:text="Change Password"
                     android:textSize="16sp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:textColor="@color/black"
                     android:layout_marginStart="16dp"/>
             </LinearLayout>
@@ -123,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:text="Logout"
                     android:textSize="16sp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:textColor="@color/black"
                     android:layout_marginStart="16dp"/>
             </LinearLayout>
@@ -132,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="App Settings"
-                android:fontFamily="@font/lufga_regular"
+                android:fontFamily="@font/inter"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -165,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="7dp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:text="Enable Notifications"
                     android:textSize="16sp"/>
 
@@ -199,7 +200,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="7dp"
                     android:text="Theme"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:textSize="16sp"/>
 
                 <Spinner
@@ -230,7 +231,7 @@
                     android:layout_weight="1"
                     android:text="Language"
                     android:layout_marginStart="7dp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:textSize="16sp"/>
 
                 <Spinner
@@ -260,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="7dp"
-                    android:fontFamily="@font/lufga_regular"
+                    android:fontFamily="@font/inter"
                     android:text="Enable Biometrics"
                     android:textSize="16sp"/>
 

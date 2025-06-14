@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nurseTaskCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white_dove">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/textTaskTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Check Inventory"
-            android:fontFamily="@font/lufga_regular"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/inter" />
 
         <TextView
             android:id="@+id/textTaskTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Today, 4:30 PM"
+            android:textSize="15sp"
             android:textColor="@android:color/darker_gray"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp"/>
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="4dp" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/checkBoxComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mark as done" />
+            android:text="Mark as done"
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="6sp" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

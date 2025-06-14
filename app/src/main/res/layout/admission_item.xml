@@ -1,57 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/primary_green">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="12dp"
+        android:background="@color/white_dove"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvPatientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="20dp"
                 android:text="Patient: John Doe"
-                android:textStyle="bold"/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter" />
 
             <TextView
                 android:id="@+id/tvBedId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="16sp"
-                android:text="Bed ID: 101"/>
+                android:text="Bed ID: 101"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter" />
 
             <TextView
                 android:id="@+id/tvAdmissionDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/source_sans_pro"
-                android:textSize="16sp"
-                android:text="Date: 12-05-2025"/>
+                android:text="Date: 12-05-2025"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter" />
 
             <TextView
                 android:id="@+id/tvAdmissionStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lufga_regular"
-                android:textSize="16sp"
-                android:text="Status: Admitted"/>
-
+                android:text="Status: Admitted"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter" />
         </LinearLayout>
 
         <ImageView
@@ -59,8 +60,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center"
-            android:src="@drawable/discharge">
-        </ImageView>
-
+            android:contentDescription="Discharge"
+            android:src="@drawable/discharge" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

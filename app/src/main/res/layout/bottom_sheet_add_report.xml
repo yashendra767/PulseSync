@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -14,57 +15,90 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:fontFamily="@font/lufga_regular"
-        android:paddingBottom="12dp"/>
+        android:fontFamily="@font/inter"
+        android:paddingBottom="12dp" />
 
-    <EditText
-        android:id="@+id/etReportTitle"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title"
-        android:fontFamily="@font/lufga_regular"
-        android:inputType="text"/>
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:endIconMode="clear_text"
+        android:hint="Title">
 
-    <EditText
-        android:id="@+id/etReportPeriod"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReportTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="@font/inter" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/source_sans_pro"
         android:hint="Period (e.g., Q1 2025)"
-        android:inputType="text"/>
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        android:layout_marginTop="8dp">
 
-    <EditText
-        android:id="@+id/etReportSummary"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReportPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:fontFamily="@font/inter" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Summary"
-        android:fontFamily="@font/lufga_regular"
-        android:inputType="textMultiLine"/>
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReportSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:fontFamily="@font/inter" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
         android:id="@+id/spinnerReportType"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/spinner_background"
+        android:layout_marginTop="12dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:entries="@array/report_types"/>
+        android:background="@drawable/spinner_background"
+        android:entries="@array/report_types" />
 
     <Button
         android:id="@+id/btnSelectDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/primary_yellow"
         android:text="Select Date"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/inter"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/btnSubmitReport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter"
         android:backgroundTint="@color/primary_yellow"
         android:text="Submit"
-        android:textColor="@color/black"/>
-
+        android:textColor="@color/black" />
 </LinearLayout>

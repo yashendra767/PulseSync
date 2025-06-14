@@ -17,8 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="Nurse Dashboard"
-            android:background="@color/primary_green"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            app:titleTextAppearance="@style/ToolbarTitleText"
+            android:background="@color/primary_green" />
 
         <FrameLayout
             android:id="@+id/nurse_fragment_container"

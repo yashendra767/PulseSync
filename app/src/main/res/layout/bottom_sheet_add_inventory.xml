@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@drawable/bottom_sheet_background_item">
@@ -11,7 +12,7 @@
         android:id="@+id/tilItemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         app:boxStrokeWidth="2dp"
         app:boxCornerRadiusTopStart="8dp"
         app:boxCornerRadiusTopEnd="8dp"
@@ -22,52 +23,66 @@
             android:id="@+id/etItemName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lufga_regular"
-            android:hint="Item Name" />
+            android:hint="Item Name"
+            android:fontFamily="@font/inter" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilItemQuantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etItemQuantity"
             android:layout_width="match_parent"
-            android:fontFamily="@font/lufga_regular"
             android:layout_height="wrap_content"
-            android:hint="Item Quantity" />
+            android:hint="Item Quantity"
+            android:fontFamily="@font/inter"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilItemCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etItemCategory"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
             android:layout_height="wrap_content"
-            android:hint="Item Category (e.g., Medicine, Consumable, Equipment)" />
+            android:hint="Item Category (e.g., Medicine)"
+            android:fontFamily="@font/inter" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilItemExpiry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
         app:boxStrokeWidth="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etItemExpiry"
             android:layout_width="match_parent"
-            android:fontFamily="@font/source_sans_pro"
             android:layout_height="wrap_content"
-            android:hint="Item Expiry Date" />
+            android:hint="Expiry Date (DD/MM/YY)"
+            android:fontFamily="@font/inter"
+            android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -75,9 +90,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/lufga_regular"
         android:text="Add Item"
+        android:textColor="@color/white"
+        app:cornerRadius="12dp"
         android:backgroundTint="@color/primary_red"
-        android:textColor="@color/black" />
-
+        android:fontFamily="@font/inter"
+        />
 </LinearLayout>

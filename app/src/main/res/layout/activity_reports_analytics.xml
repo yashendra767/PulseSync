@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,16 +14,16 @@
         android:layout_height="wrap_content"
         android:background="@color/primary_yellow"
         android:elevation="4dp"
-        android:padding="7dp"
+        app:titleTextAppearance="@style/ToolbarTitleText"
         app:title="Reports and Analytics"
-        app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"/>
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,24 +32,27 @@
             android:gravity="center_horizontal"
             android:paddingBottom="80dp">
 
+            <!-- STAT CARDS -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp">
+                android:paddingBottom="10dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="8dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:paddingEnd="8dp">
 
+                    <!-- Card Template: Repeat for 3 cards -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="5dp"
+                        app:cardElevation="6dp"
                         app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
@@ -65,17 +67,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="120"
-                                android:fontFamily="@font/lufga_regular"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/primary_yellow"/>
+                                android:textColor="@color/primary_yellow"
+                                android:fontFamily="@font/inter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Total Beds"
                                 android:textSize="14sp"
-                                android:textColor="#2D3436"/>
+                                android:textColor="#2D3436"
+                                android:fontFamily="@font/inter" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
@@ -84,7 +87,7 @@
                         android:layout_height="100dp"
                         android:layout_marginEnd="8dp"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="5dp"
+                        app:cardElevation="6dp"
                         app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
@@ -98,26 +101,28 @@
                                 android:id="@+id/tvOccupiedBeds"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="35"
+                                android:text="120"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:fontFamily="@font/lufga_regular"
-                                android:textColor="@color/primary_yellow"/>
+                                android:textColor="@color/primary_yellow"
+                                android:fontFamily="@font/inter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Occupied Beds"
                                 android:textSize="14sp"
-                                android:textColor="#2D3436"/>
+                                android:textColor="#2D3436"
+                                android:fontFamily="@font/inter" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="5dp"
+                        app:cardElevation="6dp"
                         app:cardBackgroundColor="@color/white">
 
                         <LinearLayout
@@ -131,41 +136,46 @@
                                 android:id="@+id/tvActiveAdmissions"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="15"
+                                android:text="120"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:fontFamily="@font/lufga_regular"
-                                android:textColor="@color/primary_yellow"/>
+                                android:textColor="@color/primary_yellow"
+                                android:fontFamily="@font/inter" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Active Admissions"
                                 android:textSize="14sp"
-                                android:textColor="#2D3436"/>
+                                android:textColor="#2D3436"
+                                android:fontFamily="@font/inter" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- Copy and replace IDs accordingly for other cards -->
+                    <!-- tvOccupiedBeds & tvActiveAdmissions -->
+                    <!-- ... -->
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <!-- REPORT GENERATION SECTION -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Generate Reports"
                 android:textSize="20sp"
-                android:fontFamily="@font/lufga_regular"
-                android:textColor="#C38839"
                 android:textStyle="bold"
-                android:paddingBottom="6dp"/>
+                android:textColor="#C38839"
+                android:fontFamily="@font/inter"
+                android:paddingBottom="8dp" />
 
             <Spinner
                 android:id="@+id/spinnerReportType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/report_types"
+                android:layout_marginBottom="12dp"
                 android:background="@drawable/spinner_background"
-                android:layout_marginBottom="8dp"/>
+                android:entries="@array/report_types" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,73 +187,73 @@
                 <Button
                     android:id="@+id/btnStartDate"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/source_sans_pro"
-                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
                     android:backgroundTint="@color/primary_yellow"
-                    android:text="Start Date"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter" />
 
                 <Button
                     android:id="@+id/btnEndDate"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
                     android:backgroundTint="@color/primary_yellow"
                     android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro"
-                    android:layout_weight="1"
-                    android:text="End Date"/>
+                    android:fontFamily="@font/inter" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnGenerateReport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lufga_regular"
-                android:backgroundTint="#FBF6E9"
+                android:text="Generate Report"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter"
                 android:textColor="#C38839"
-                android:textSize="18dp"
-                android:text="Generate Report"/>
+                android:backgroundTint="#FBF6E9" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvReportData"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:visibility="gone"
                 android:layout_marginTop="12dp"
                 android:clipToPadding="false"
-                android:paddingBottom="8dp"/>
+                android:paddingBottom="8dp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tvNoData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No reports available"
-                android:textColor="#2D3436"
                 android:textSize="16sp"
+                android:textColor="#2D3436"
+                android:fontFamily="@font/inter"
                 android:visibility="gone"
                 android:layout_gravity="center"
-                android:padding="12dp"/>
+                android:paddingTop="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Analytics"
                 android:textSize="20sp"
-                android:fontFamily="@font/lufga_regular"
-                android:textColor="@color/black"
                 android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:paddingTop="24dp" />
 
             <FrameLayout
                 android:id="@+id/analyticsContainer"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/white"
-                android:elevation="4dp"
-                android:layout_weight="1"
-                android:layout_marginTop="8dp"/>
+                android:elevation="4dp" />
         </LinearLayout>
     </ScrollView>
 
@@ -254,6 +264,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/baseline_add_24"
-        android:backgroundTint="@color/primary_yellow"/>
-
+        android:contentDescription="Add Report"
+        android:backgroundTint="@color/primary_yellow" />
 </LinearLayout>

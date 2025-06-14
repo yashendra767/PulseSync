@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_margin="9dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/source_sans_pro"
+            android:fontFamily="@font/inter"
             android:textSize="30dp"
             android:drawableStart="@drawable/baseline_arrow_forward_ios_24">
         </TextView>

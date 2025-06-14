@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.pulsesync.doctor.DoctorDashboard
 import com.example.pulsesync.nurse.NurseDashboard
 import com.example.pulsesync.pharmacist.PharmacistDashboard
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -25,7 +26,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var signUpPass: TextInputEditText
     private lateinit var signUpName: TextInputEditText
     private lateinit var roleSpinner: Spinner
-    private lateinit var signUpButton: MaterialCardView
+    private lateinit var signUpButton: MaterialButton
     private lateinit var tVLogin: TextView
     private lateinit var tVLogin2: TextView
 

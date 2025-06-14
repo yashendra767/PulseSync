@@ -1,51 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_dove"
-    android:padding="10dp">
+    android:paddingHorizontal="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/tv_nurse_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lufga_regular"
+        android:fontFamily="@font/inter"
         android:text="Welcome, Nurse"
-        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
-        android:backgroundTint="@color/primary_green"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp">
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white_dove"
+        app:strokeColor="@color/primary_green"
+        app:strokeWidth="2dp">
 
         <TextView
             android:id="@+id/tv_active_patients"
             android:layout_width="wrap_content"
-            android:padding="10dp"
-            android:fontFamily="@font/lufga_regular"
             android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:fontFamily="@font/inter"
             android:text="Active Patients: 0"
-            android:textSize="16sp" />
-
+            android:textSize="16sp"
+            android:textColor="@color/primary_green_dark" />
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_alerts"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical" />
+
     <TextView
         android:id="@+id/tv_no_alerts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:visibility="gone"
-        android:fontFamily="@font/lufga_regular"
+        android:fontFamily="@font/inter"
         android:text="No alerts for now"
-        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
         android:textColor="@android:color/darker_gray"
-        android:padding="10dp"/>
+        android:padding="12dp" />
 </LinearLayout>

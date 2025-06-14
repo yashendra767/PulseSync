@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,7 +24,7 @@ class ForgotPass : AppCompatActivity() {
             insets
         }
         firebaseAuth = FirebaseAuth.getInstance()
-        val resetButton = findViewById<CardView>(R.id.resetButton)
+        val resetButton = findViewById<MaterialButton>(R.id.resetButton)
         resetButton.setOnClickListener{
             reset()
         }

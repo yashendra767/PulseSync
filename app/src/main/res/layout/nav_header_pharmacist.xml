@@ -16,14 +16,14 @@
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:fontFamily="@font/lufga_regular"/>
+        android:fontFamily="@font/inter"/>
 
     <TextView
         android:id="@+id/pharmacistEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
-        android:fontFamily="@font/source_sans_pro"
+        android:fontFamily="@font/inter"
         android:text="pharma@example.com"
         android:textColor="@android:color/white"
         android:textSize="17sp" />
@@ -36,5 +36,5 @@
         android:layout_marginTop="5dp"
         android:textColor="@android:color/white"
         android:textSize="17sp"
-        android:fontFamily="@font/lufga_regular"/>
+        android:fontFamily="@font/inter"/>
 </LinearLayout>

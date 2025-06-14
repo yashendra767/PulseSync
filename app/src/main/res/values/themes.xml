@@ -9,7 +9,21 @@
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:statusBarColor">@color/primary_yellow_dark</item>
+        <item name="popupMenuStyle">@style/PopupMenuStyle</item>
+
     </style>
+
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/white_dove</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <!-- Base application theme. -->
 
 

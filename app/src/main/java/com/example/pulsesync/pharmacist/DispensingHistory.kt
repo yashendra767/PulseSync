@@ -2,9 +2,11 @@ package com.example.pulsesync.pharmacist
 
 import android.os.Build
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -18,7 +20,6 @@ class DispensingHistory : AppCompatActivity() {
     private lateinit var binding: ActivityDispensingHistoryBinding
     private lateinit var adapter: DispenseHistoryAdapter
     private val historyList = mutableListOf<DispenseHistoryItem>()
-    private val filteredList = mutableListOf<DispenseHistoryItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,40 +51,67 @@ class DispensingHistory : AppCompatActivity() {
             .get()
             .addOnSuccessListener { snapshot ->
                 historyList.clear()
-                for (doc in snapshot) {
-                    val item = doc.toObject(DispenseHistoryItem::class.java)
-                    historyList.add(item)
+                if (!snapshot.isEmpty) {
+                    for (doc in snapshot) {
+                        val item = DispenseHistoryItem(
+                            dispensedBy = doc.getString("dispensedBy") ?: "",
+                            dispensedTo = doc.getString("dispensedTo") ?: "",
+                            itemId = doc.getString("itemId") ?: "",
+                            itemName = doc.getString("itemName") ?: "",
+                            quantityDispensed = (doc.getLong("quantityDispensed") ?: 0L).toInt(),
+                            timestamp = doc.getLong("timestamp") ?: 0L,
+                            note = doc.getString("note") ?: ""
+                        )
+                        Log.d("DISPENSE", "Parsed manually: ${item.itemName}, ${item.timestamp}")
+                        historyList.add(item)
+                    }
+                    adapter.notifyDataSetChanged()
+                } else {
+                    Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show()
                 }
-                adapter.notifyDataSetChanged()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Dispense History not Loaded", Toast.LENGTH_SHORT).show()
             }
     }
 
+
+
     private fun setupSearchView() {
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                filter(query.orEmpty())
-                return true
+        binding.searchView.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus && binding.searchView.text.isNullOrBlank()) {
+                adapter.updateList(historyList)
+            }
+        }
+
+        binding.searchView.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s?.toString()?.trim().orEmpty()
+                if (query.isEmpty()) {
+                    adapter.updateList(historyList)
+                } else {
+                    val filtered = historyList.filter {
+                        it.itemName.contains(query, ignoreCase = true) ||
+                                it.note.contains(query, ignoreCase = true)
+                    }
+                    adapter.updateList(filtered)
+                }
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filter(newText.orEmpty())
-                return true
-            }
+            override fun afterTextChanged(s: Editable?) {}
         })
     }
 
+
+
     private fun filter(query: String) {
         val lowerQuery = query.lowercase()
-        filteredList.clear()
-        filteredList.addAll(
-            historyList.filter {
-                it.itemName.lowercase().contains(lowerQuery) ||
-                        it.note.lowercase().contains(lowerQuery)
-            }
-        )
-        adapter.notifyDataSetChanged()
+        val filtered = historyList.filter {
+            it.itemName.lowercase().contains(lowerQuery) ||
+                    it.note.lowercase().contains(lowerQuery)
+        }
+        adapter.updateList(filtered)
     }
 }

@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@color/primary_green"
         app:title="Beds and Admissions"
+        app:titleTextAppearance="@style/ToolbarTitleText"
         app:titleTextColor="@color/black"
         app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"
         app:layout_scrollFlags="scroll|enterAlways" />
